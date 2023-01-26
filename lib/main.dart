@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
 class MyAppState extends ChangeNotifier {
   final stopwatch = Stopwatch();
 
-  var opacityList = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0];
+  var opacityList = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,];
   void toggleVisible(context,i) {
     
     if(!opacityList.contains(0.0)) {
@@ -48,7 +48,7 @@ class MyAppState extends ChangeNotifier {
 
   void newGame() {
     stopwatch.reset();
-    opacityList = [1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,];
+    opacityList = [1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,];
     notifyListeners();
   }
 }
@@ -68,9 +68,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       body: GridView.builder(
-        itemCount: 9,
+        itemCount: 16,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
+          crossAxisCount: 4,
         ),
         itemBuilder: (context, index) {
           return Opacity(
